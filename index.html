@@ -7,6 +7,50 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+
+
+
+		<div class="popup__hidden">
+		<div class="container__popup">
+			<button class="close__popup" type="button"></button>
+			<span class="visually-hidden"> Закрыть окно </span>
+			</button>
+			<form class="feedback__form">
+			<h2 class="popup__title"> Ваш фидбэк </h2>
+			<label class="feedback__selection">
+				<span class="popup__qestions"> Как часто вы заходите на сайт? </span>
+				<select class="feedback__field">
+					<option>Почти каждый день</option>
+					<option>Раз в неделю</option>
+					<option>Раз в месяц</option>
+					<option>Раз в год</option>
+				</select>
+			</label>
+
+				<span class="popup__qestions"> Вы подписаны на email рассылку? </span>
+				<label>
+				<input class="radio__button" type="radio" name="radio__group">
+				<span class="radio__text">Да</span>
+			</label>
+			<label>
+				<input class="radio__button" type="radio" name="radio__group" >
+				<span class="radio__text">Нет</span>
+			</label>
+				<label class="feedback__form-text">
+					<span class="popup__qestions"> Расскажите, какой контент вы хотите видеть на нашем сайте?
+					</span>
+					<textarea class="field"  placeholder="Может, больше рецептов?" required></textarea>
+				</label>
+				
+				<button class="feedback__button" type="submit">
+				<span class="button__text">Отправить </span>
+				</button>
+			</form>>
+		</div>
+	</div>
+	
+<!-- Header -->
+
 	<header class="header">
 	  <div class="container__header">
 	    <div class="menu">
@@ -312,7 +356,6 @@
 	          </div>
 	        </div>
 	      </article>
-
 	    </main>
 
 	    <!--   ASIDE   -->
@@ -494,7 +537,7 @@
 					<div class="new-price">800</div>
 				</div>
 				<form>
-					<button> В магазин</button>
+					<button class="button__market"> В магазин</button>
 				</form>
 			</div>
 
@@ -512,7 +555,7 @@
 					<div class="new-price">3500</div>
 				</div>
 				<form>
-					<button> В магазин</button>
+					<button class="button__market"> В магазин</button>
 				</form>
 			</div>
 
@@ -529,7 +572,7 @@
 					<div class="new-price">400</div>
 				</div>
 				<form>
-					<button> В магазин</button>
+					<button class="button__market"> В магазин</button>
 				</form>
 			</div>
 
