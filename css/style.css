@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @font-face {
   font-family: open-sans-bolder;
   src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
@@ -726,22 +732,32 @@ h3 a {
 .products__item{
 	display: flex;
 	flex-direction: column;
-
+    align-items: center;
 	/*width: 33.33%;*/
 	padding: 0;
     width: 300px;
 
 }
-.products__item:nth-child(n+2){
-	margin-left: 65px;
+.picture {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.craft-img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .market{
 	display: flex;
-	flex-direction: row;
+	/*flex-direction: row;*/
 	justify-content: space-between;
+	 align-items: flex-end;
 	margin-top: 25px;
 	position: relative;
+
 
 }
 .products__img{
@@ -749,6 +765,7 @@ h3 a {
     margin: 0 auto;
     text-align: center;
     width: 100%;
+    height: auto;
 }
 .products__border{
 	outline: 3px solid #d3c59d;
@@ -808,6 +825,10 @@ a:hover {
     font-size: 14px;
     font-family: open-sans-bolder, sans-serif;
     text-decoration: line-through;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    font-size: 14px;
 }
 .new-price {
     font-size: 20px;
@@ -834,7 +855,7 @@ a:hover {
 		flex-direction: column-reverse;
 	}
 
-	.container__trend, .page__container, .page, .posts, .container__products, .aside__posts{
+	.container__trend, .page__container, .page, .posts, .container__products, .aside__posts, .products__item{
 		flex-direction: column;
 	}
 
@@ -844,11 +865,30 @@ a:hover {
 	}
 
 	.main{
-		width: 100%;
+	   width: 100%;
+
+	}
+
+	.post-img{
+		min-width: 0;
 	}
 
 	.post__text{
 		margin-left: 0;
+		
+	}
+	.post-title{
+		max-width: 100%;
+	}
+	.post__text-item{
+		font-size: 14px;
+		max-width: 100%;
+	}
+
+	.post__name-link{
+		font-size: 16px;
+		flex-wrap: wrap;
+		max-width: 100%;
 	}
 
 	.aside {
@@ -856,7 +896,14 @@ a:hover {
         max-width: 640px;
         margin-left: 0;
 }
+.products__item{
+	flex-wrap: wrap;
 
+}
+.products__item:nth-child(n+2){
+	margin-left: 0;
+
+}
 }
 
 .popup__hidden{
