@@ -167,8 +167,7 @@ background-image: url(../svg/form-x.svg);
 
 .header {
   position: relative;
-  background: black
-    url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
+  background-image: url("../images/banner-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -187,7 +186,6 @@ background-image: url(../svg/form-x.svg);
 }
 .container__header {
   max-width: 1200px;
-  width: 100%;
   margin: auto;
   text-align: center;
 }
@@ -260,6 +258,7 @@ background-image: url(../svg/form-x.svg);
   display: flex;
   flex-direction: row;
 }
+
 .posts:nth-child(n + 2) {
   margin-top: 60px;
 }
@@ -595,6 +594,15 @@ background-image: url(../svg/form-x.svg);
   font-size: 12px;
 }
 
+
+/*Trends*/
+
+.trends{
+
+	width: 100%;
+    margin-top: 57px;
+}
+
 .container__trend{
 	display: flex;
 	flex-direction: row;
@@ -602,10 +610,14 @@ background-image: url(../svg/form-x.svg);
 
 }
 .trend__item {
+	direction: flex;
+	align-items: flex-end;
 	width: 25%;
     min-height: 320px;
     background-color: black;
     background-size: cover;
+    position: relative;
+    padding: 15px 20px;
     position: relative;
    
 }
@@ -835,10 +847,89 @@ a:hover {
   font-family: open-sans-bolder, sans-serif;
 }
 
+@media (min-width: 1200px) {
+
+    .menu-button {
+        display: none;
+    }
+    }
+
+    @media (max-width: 1199px){
+    	.header {
+        margin-right: 0;
+    }
+
+    .menu-button {
+        border: none;
+        width: 24px;
+        height: 21px;
+        background-color: transparent;
+        position: relative;
+    }
+
+     .menu-button-label, .menu-button:before, .menu-button:after {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+    }
+    
+    .menu-button:before {
+        content: "";
+        position: absolute;
+        top: 0;
+    }
+    
+    .menu-button:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+    }
+
+    .menu__list{
+    	display: none;
+    }
+    }
+
+/*Tablet*/
+
+@media (min-width: 641px) and (max-width: 1199px){
+	.header {
+        padding-bottom: 112px;
+        background-image: url("../images/banner-bg-tablet.jpg");
+        padding-top: 45px;
+    }
+    
+    .menu {
+        padding: 0 35px;
+    }
+
+    .header__logo__img"{
+    	width: 160px;
+        margin-left: 0;
+    }
+
+    .posts {
+    	flex-direction: column;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait){
+	.trend__item {
+		flex-basis: 49%;
+        flex-grow: 1;
+
+	}
+
+	.trends__content{
+		justify-content: space-between;
+        flex-wrap: wrap;
+	}
+}
 
 /*Mobile*/
 
-@media(max-width: 360px){
+@media(max-width: 640px){
 
 	.header{
 		 background-image: url("../images/banner-mobile.jpg");
@@ -904,6 +995,55 @@ a:hover {
 	margin-left: 0;
 
 }
+.products{
+	margin: 30px auto 0px;
+}
+.container__products{
+	margin-top: 30px;
+}
+
+.products__item{
+	 align-items: center;
+      margin-bottom: 55px;
+}
+
+.products__border{
+	width: 100%;
+        margin-top: -12px;
+        padding-top: 25px;
+}
+
+.menu__list{
+	 display: none;
+}
+ .menu-button {
+        border: none;
+        width: 22px;
+        height: 19px;
+        background-color: transparent;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu-button-label, .menu-button:before, .menu-button:after {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+    }
+    
+    .menu-button:before {
+        content: "";
+        position: absolute;
+        top: 0;
+    }
+    
+    .menu-button:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+    }
+
 }
 
 .popup__hidden{
